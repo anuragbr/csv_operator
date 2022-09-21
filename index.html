@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Read CSV</title>
+
+    <script type="text/javascript" src="papaparse.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  </head>
+  <body class="container">
+    
+      <h1 class="d-flex align-items-center justify-content-center mt-5">
+        Bilingual Checker
+      </h1>
+      <br /><br /><br />
+      <div class="d-flex align-items-center justify-content-center">
+        <input type="file" id="upload-csv" accept=".csv"  />
+        <button id="btn-upload-csv " class="btn btn-light">Read CSV</button>
+      </div>
+      <table id="tbl-data"></table>
+      <br /><br />
+      <div class="row">
+        <div class="col-8 col-sm-6">
+          <label id="row1h1" for="row1" class="form-label"></label>
+          <input
+            id="row1"
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+        <div class="col-8 col-sm-6">
+          <label id="row2h2" for="row2" class="form-label"></label>
+          <input
+            id="row2"
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            aria-label="Username"
+            aria-describedby="addon-wrapping"
+          />
+        </div>
+      </div>
+      <br /><br />
+	  <div class="d-flex align-items-center justify-content-center">
+      <button id="prev" class="btn btn-primary mx-2 shadow">Prev</button>
+      <button id="save" class="mx-2 shadow btn btn-success">Save Changes</button>
+      <button id="download" class="btn  mx-2 shadow btn-info">Download</button>
+      <button id="load" class="mx-2 shadow btn btn-warning">Load from Database</button>
+      <button id="saveToDb" class="mx-2 shadow btn btn-danger ">Save to Database</button>
+      <button id="next" class="btn btn-primary mx-2 shadow  ">Next</button>
+    </div>
+</div>
+    <br /><br /><br />
+
+    <div class="row" id="dbData"></div>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
